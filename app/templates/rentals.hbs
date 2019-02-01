@@ -1,29 +1,27 @@
-<div>
-    <div>
-        <h2>Welcome!</h2>
-        <p>We hope that our shitty ideas don't ruin your life, because they have certainly ruined ours, we just don't know it yet.</p>
-        {{#link-to "about"}}About Us{{/link-to}}
-
-        {{#each this.model as |rental|}}
-            <article>
-                <div>
-                    <h3>{{rental.title}}</h3>
-                    <div>
-                        <span>Owner:</span> {{rental.owner}}
-                    </div>
-                    <div>
-                        <span>Type:</span> {{rental.category}}
-                    </div>
-                    <div>
-                        <span>Location:</span> {{rental.city}}
-                    </div>
-                    <div>
-                        <span>Number of Bedrooms:</span> {{rental.bedrooms}}
-                    </div>
+<div class="jumbo">
+    <div class="right tomster"></div>
+    <h2>Welcome!</h2>
+    <p>We hope that our shitty ideas don't ruin your life, because they have certainly ruined ours, we just don't know it yet.</p>
+    {{#link-to "about"}}About Us{{/link-to}}
+    {{#each this.model as |rental|}}
+        <article class="listing">
+            <div class="details">
+                <h3>{{rental.title}}</h3>
+                <div class="detail owner">
+                    <span>Owner:</span> {{rental.owner}}
                 </div>
-            </article>
-        {{/each}}
-    </div>
+                <div class="detail type">
+                    <span>Type:</span> {{rental.category}}
+                </div>
+                <div class="detail location">
+                    <span>Location:</span> {{rental.city}}
+                </div>
+                <div class="detail bedrooms">
+                    <span>Number of Bedrooms:</span> {{rental.bedrooms}}
+                </div>
+            </div>
+        </article>
+    {{/each}}
 </div>
 
 {{outlet}}
