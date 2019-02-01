@@ -3,6 +3,26 @@
         <h2>Welcome!</h2>
         <p>We hope that our shitty ideas don't ruin your life, because they have certainly ruined ours, we just don't know it yet.</p>
         {{#link-to "about"}}About Us{{/link-to}}
+
+        {{#each this.model as |rental|}}
+            <article>
+                <div>
+                    <h3>{{rental.title}}</h3>
+                    <div>
+                        <span>Owner:</span> {{rental.owner}}
+                    </div>
+                    <div>
+                        <span>Type:</span> {{rental.category}}
+                    </div>
+                    <div>
+                        <span>Location:</span> {{rental.city}}
+                    </div>
+                    <div>
+                        <span>Number of Bedrooms:</span> {{rental.bedrooms}}
+                    </div>
+                </div>
+            </article>
+        {{/each}}
     </div>
 </div>
 
